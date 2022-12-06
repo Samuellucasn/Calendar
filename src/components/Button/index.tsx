@@ -6,7 +6,7 @@ interface ButtonProps {
 
 const Button : React.FC<ButtonProps> = ({children}) => {
     return (
-        <ButtonStyle></ButtonStyle>
+        <ButtonStyle>{children}</ButtonStyle>
     )
 } 
 

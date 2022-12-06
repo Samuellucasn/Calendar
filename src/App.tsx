@@ -1,4 +1,4 @@
-import Global from "./Global"
+import Global from "./style/Global"
 import Calendar from "./components/Calendar"
 
 function App() {
