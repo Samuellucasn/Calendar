@@ -15,26 +15,31 @@ function Calendar() {
         []
     )
 
-    const eventForDate = (date:any) => events.find((e:any) => e.date === date)
+    const eventForDate = (date:any) => events.find((v:any) => v.date === date)
     
     useEffect(() => {
         localStorage.setItem('events', JSON.stringify(events))
     }, [events])
-    const date = new Date()
-    const year = date.getFullYear()
+
+    const [monthString, setMonthString] = useState('')
+    const [year, setYear] = useState(Number)
 
     useEffect(() => {
+        const date = new Date()
+        
+        if (MonthId !== 0) date.setMonth(new Date().getMonth() + MonthId)
+        const year = date.getFullYear()
+        const monthString = date.toLocaleString('eng', { month: 'long' })
+        
         const daysArr = []
         const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
         const day = date.getDate()
         const monthNumber = date.getMonth()
-        const monthString = date.toLocaleString('eng', { month: 'short' })
         const weekDay = date.toLocaleString('eng', { weekday: 'long' })
         const monthDays = new Date(year, date.getMonth()+1, 0).getDate()
-    
         const blockDays = weekdays.indexOf(weekDay);
-
-
+        
+        
         
         for (let i = 1; i <= blockDays + monthDays; i++) {
             const dayString = `${monthNumber + 1}/${i - blockDays}/${year}`
@@ -57,6 +62,8 @@ function Calendar() {
         }
 
         setDaysArray(daysArr)
+        setMonthString(monthString)
+        setYear(year)
 
     }, [events, MonthId])
 
@@ -64,7 +71,10 @@ function Calendar() {
 
     return (
         <>
-        <CalendarHeader>{year}</CalendarHeader>
+        <CalendarHeader 
+            onNext={() => { setMonthId(MonthId - 1) }}
+            onBack={() => { setMonthId(MonthId + 1) }}
+        >{monthString} {year}</CalendarHeader>
         
         <CalendarStyle>
         <>

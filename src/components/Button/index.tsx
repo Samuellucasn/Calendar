@@ -2,11 +2,12 @@ import { ButtonStyle } from './style'
 
 interface ButtonProps {
     children: React.ReactNode
+    onClick: () => void
 }
 
-const Button : React.FC<ButtonProps> = ({children}) => {
+const Button : React.FC<ButtonProps> = ({children, onClick}) => {
     return (
-        <ButtonStyle>{children}</ButtonStyle>
+        <ButtonStyle onClick={onClick}>{children}</ButtonStyle>
     )
 } 
 

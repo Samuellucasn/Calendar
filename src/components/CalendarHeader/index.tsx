@@ -4,15 +4,17 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 
 interface HeaderProps {
     children: any
+    onNext: any
+    onBack: any
 }
 
-const Header: React.FC<HeaderProps> = ({children}) => {
+const Header: React.FC<HeaderProps> = ({children, onNext, onBack}) => {
     return (
         <>
         <HeaderStyle>
-            <Button><FaChevronLeft></FaChevronLeft></Button>
+            <Button onClick={ onNext }><FaChevronLeft></FaChevronLeft></Button>
                 <h1>{ children }</h1>
-            <Button><FaChevronRight></FaChevronRight></Button>
+            <Button onClick={ onBack }><FaChevronRight></FaChevronRight></Button>
         </HeaderStyle>
         </>
     ) 
