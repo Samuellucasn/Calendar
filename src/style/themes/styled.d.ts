@@ -8,6 +8,7 @@ declare module 'styled-components' {
         bodyBackground: string,
 
         headerBackground: string,
+        headerColor: string,
 
         dayInWeekBackground: string;
     },
@@ -15,14 +16,25 @@ declare module 'styled-components' {
     fonts: {
         fontFamily: string,
 
+        fontWeight: string,
+
         textAlignDay: string,
     },
 
     styles: {
-        borderDay: string,
-        borderStyleDay: string,
+        gridRow: string,
 
-        borderDayInWeek: string,
+        calendarPadding: string,
+        calendarBorderRadius: string,
+        calendarBoxShadow: string,
+
+        headerBorderBottom: string,
+
+        dayBorder: string,
+        dayBorderStyle: string,
+
+        dayInWeekBorder: string,
+        dayInWeekPadding: string,
     }
     }
 }

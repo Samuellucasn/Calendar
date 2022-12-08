@@ -5,6 +5,7 @@ export default {
         bodyBackground: '#a8a8a8',
 
         headerBackground: '#dd5252e8',
+        headerColor: '',
 
         dayInWeekBackground: '#ebb1b1',
     },
@@ -12,13 +13,24 @@ export default {
     fonts: {
         fontFamily: '',
 
+        fontWeight: '',
+
         textAlignDay: '',
     },
 
     styles: {
-        borderDay: ' 1px solid #beb9b9',
-        borderStyleDay: 'dotted',
+        gridRow: '20px' ,
 
-        borderDayInWeek: '1px solid white',
+        calendarPadding: '10px',
+        calendarBorderRadius: '',
+        calendarBoxShadow: '',
+
+        headerBorderBottom: '',
+
+        dayBorder: '1px solid #beb9b9',
+        dayBorderStyle: 'dotted',
+
+        dayInWeekBorder: '1px solid white',
+        dayInWeekPadding: '10px',
     }
 }

@@ -1,4 +1,4 @@
-import { DaysStyle } from "./style";
+import { DayStyle } from "./style";
 
 interface DaysProps {
     day: any,
@@ -7,10 +7,10 @@ interface DaysProps {
 
 const Days : React.FC<DaysProps> = ({ day, onClick }) => {
     return (
-        <DaysStyle onClick={onClick} >
+        <DayStyle onClick={onClick} >
             {day.value !== 'none'? day.value : ''}
             {day.event && <div>{ day.event.title }</div>}
-        </DaysStyle>
+        </DayStyle>
     )
 }
 

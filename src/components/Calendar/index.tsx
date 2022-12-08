@@ -2,7 +2,7 @@ import { CalendarStyle, DaysInWeekDiv } from './style'
 import CalendarHeader from '../CalendarHeader'
 import EventModal from '../EventModal'
 import { useState, useEffect } from 'react'
-import Days from '../Days'
+import Day from '../Day'
 
 function Calendar() {
     const [MonthId, setMonthId] = useState(0)
@@ -88,7 +88,7 @@ function Calendar() {
 
         {
             daysArray.map((v:any, i: any) => {
-                return <Days
+                return <Day
                   key={i}
                   day={v}
                   onClick={() => {
