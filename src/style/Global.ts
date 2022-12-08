@@ -10,7 +10,9 @@ export const globalStyle = createGlobalStyle`
     body {
         height: 100vh;
 
-        background-color: #a8a8a8;
+        background-color: ${props => props.theme.colors.bodyBackground};
+        
+        font-family: ${props => props.theme.fonts.fontFamily};
         
         display: flex;
         justify-content: center;

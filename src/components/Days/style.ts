@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 export const DaysStyle = styled.div`
-    background-color: white;
-    border: 1px solid #beb9b9;
-    border-style: dotted;
+    border: ${props => props.theme.styles.borderDay};
+    border-style: ${props => props.theme.styles.borderStyleDay};
+
+    text-align: ${props => props.theme.fonts.textAlignDay};
 
     height: 50px;
 `

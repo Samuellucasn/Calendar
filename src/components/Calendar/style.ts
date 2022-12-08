@@ -13,11 +13,11 @@ export const CalendarStyle = styled.section`
 export const DaysInWeekDiv = styled.div`
 
     display: flex;
-    //text-align: center;
+    text-align: center;
     align-items: center;
 
     padding: 10px;
-    background-color: #ebb1b1;
-    border: 1px solid white;
+    background-color: ${props => props.theme.colors.dayInWeekBackground};
+    border: ${props => props.theme.styles.borderDayInWeek};
 
 `
