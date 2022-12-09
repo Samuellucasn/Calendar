@@ -6,6 +6,7 @@ export const CalendarStyle = styled.section`
     grid-template-rows:  ${props => props.theme.styles.gridRow} repeat(5, 1fr);
     grid-template-columns:  repeat(7, 1fr);
 
+
     background-color: white;
     padding: ${props => props.theme.styles.calendarPadding};
 

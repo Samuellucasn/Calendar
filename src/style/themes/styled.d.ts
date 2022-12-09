@@ -9,8 +9,14 @@ declare module 'styled-components' {
 
         headerBackground: string,
         headerColor: string,
+        headerButtonBackground: string,
 
         dayInWeekBackground: string;
+        dayInWeekBackgroundWeekend: string,
+        
+        eventsBackground: string,
+        eventsButtonBgClose: string,
+        eventsButtonBgSave: string,
     },
 
     fonts: {
@@ -29,12 +35,16 @@ declare module 'styled-components' {
         calendarBoxShadow: string,
 
         headerBorderBottom: string,
+        headerButtonPadding: string,
 
         dayBorder: string,
         dayBorderStyle: string,
 
         dayInWeekBorder: string,
         dayInWeekPadding: string,
+        
+        eventsButtonWeight: string,
+        eventsButtonPadding: string,
     }
     }
 }
