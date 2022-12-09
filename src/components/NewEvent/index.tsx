@@ -9,17 +9,16 @@ const EventModal: React.FC<any> = ({ onSave, onClose }) => {
     const [error, setError] = useState(false)
 
     return (
-        <EventStyle 
-            //value={title}
-            onChange={(e:any) => {
-            setTitle(e.target.value)}}
-            >   
-            <Button onClick={() => {}}>d</Button>
+        <EventStyle>   
+            <Button onClick={onClose}>d</Button>
             
             <h3>Event mark</h3>
 
-            <Input/> 
-            <Button onClick={() => {}}>s</Button>
+            <Input 
+                value={title}
+                onChange={(e:any) => { setTitle(e.target.value)} }
+            /> 
+            <Button onClick={onSave}>s</Button>
         </EventStyle>
     )
 }

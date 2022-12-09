@@ -1,8 +1,13 @@
 import { InputStyle } from './style'
 
-const Input: any = () => {
+interface propsInput {
+    onChange: () => void
+}
+
+const Input: any = ({ onChange }:any) => {
 
     <InputStyle
+        onChange={onChange}
     />
 }
 

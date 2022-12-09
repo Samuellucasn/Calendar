@@ -1,16 +1,11 @@
 import React, { useEffect, useState } from "react";
 
-interface propsDates {
-    events: any,
-    monthNav: number
-}
-
 export const useDates: (events: any, monthNav: number) => { daysArray: Object[]; dateDisplay: string; } = (events, monthNav) => {
 
     const [daysArray, setDaysArray] = useState<Object[]>([])
     const [dateDisplay, setDateDisplay] = useState('')
 
-    const eventForDate = (date:any) => events.find((v:any) => v.date === date)
+    const eventForDate = (date:string) => events.find((v:any) => v.date === date)
 
     useEffect(() => {
         const date = new Date()

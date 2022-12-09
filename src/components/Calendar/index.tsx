@@ -9,7 +9,7 @@ import NewEvent from '../NewEvent'
 
 function Calendar() {
     const [monthNav, setMonthNav] = useState(0)
-    const [clicked, setClicked] = useState()
+    const [clicked, setClicked] = useState<string | null>()
     const [events, setEvents] = useState(
       localStorage.getItem('events') ? 
         JSON.parse(localStorage.getItem('events') || "") : 
@@ -55,7 +55,14 @@ function Calendar() {
         }
         </CalendarStyle>
 
-        <NewEvent></NewEvent>
+        { clicked &&
+            <NewEvent 
+            onClose={() => setClicked(null)}
+            onSave={(title: string) => {
+                setEvents([ ...events, { title, date: clicked }])
+                setClicked(null)
+            }}/>
+        }
         </>
     )
 }
