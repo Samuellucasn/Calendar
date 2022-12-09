@@ -1,13 +1,14 @@
 import { CalendarStyle, DaysInWeekDiv } from './style'
-import CalendarHeader from '../CalendarHeader'
-import EventModal from '../EventModal'
 import { useState, useEffect } from 'react'
+
+import {useDates} from '../../hooks/useDates'
+
+import CalendarHeader from '../CalendarHeader'
 import Day from '../Day'
+import NewEvent from '../NewEvent'
 
 function Calendar() {
-    const [MonthId, setMonthId] = useState(0)
-    const [daysArray, setDaysArray] = useState([{}])
-    const [dateDisplay, setDateDisplay] = useState('')
+    const [monthNav, setMonthNav] = useState(0)
     const [clicked, setClicked] = useState()
     const [events, setEvents] = useState(
       localStorage.getItem('events') ? 
@@ -21,63 +22,16 @@ function Calendar() {
         localStorage.setItem('events', JSON.stringify(events))
     }, [events])
 
-    const [monthString, setMonthString] = useState('')
-    const [year, setYear] = useState(Number)
-
-    useEffect(() => {
-        const date = new Date()
-        
-        if (MonthId !== 0) date.setMonth(new Date().getMonth() + MonthId)
-        const year = date.getFullYear()
-        const monthString = date.toLocaleString('eng', { month: 'long' })
-        
-        const daysArr = []
-        const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
-        const day = date.getDate()
-        const monthNumber = date.getMonth()
-        const weekDay = date.toLocaleString('eng', { weekday: 'long' })
-        const monthDays = new Date(year, date.getMonth()+1, 0).getDate()
-        const blockDays = weekdays.indexOf(weekDay);
-        
-        
-        
-        for (let i = 1; i <= blockDays + monthDays; i++) {
-            const dayString = `${monthNumber + 1}/${i - blockDays}/${year}`
-
-            if (i > blockDays) {
-                daysArr.push({
-                    value: i - blockDays,
-                    event: eventForDate(dayString),
-                    isCurrentDay: i - blockDays === day && MonthId === 0,
-                    date: dayString
-                })
-            } else {
-                daysArr.push({
-                    value: 'none',
-                    event: null,
-                    isCurrentDay: false,
-                    date: ''
-                })
-            }
-        }
-
-        setDaysArray(daysArr)
-        setMonthString(monthString)
-        setYear(year)
-
-    }, [events, MonthId])
-
-    console.log(daysArray)
+    const { daysArray, dateDisplay } = useDates(events, monthNav)
 
     return (
         <>
         <CalendarHeader 
-            onNext={() => { setMonthId(MonthId - 1) }}
-            onBack={() => { setMonthId(MonthId + 1) }}
-        >{monthString} {year}</CalendarHeader>
+            onNext={() => { setMonthNav(monthNav - 1) }}
+            onBack={() => { setMonthNav(monthNav + 1) }}
+        >{dateDisplay}</CalendarHeader>
         
         <CalendarStyle>
-        <>
             <DaysInWeekDiv>Sun</DaysInWeekDiv>
             <DaysInWeekDiv>Mon</DaysInWeekDiv>
             <DaysInWeekDiv>Tue</DaysInWeekDiv>
@@ -99,19 +53,9 @@ function Calendar() {
                 />
             })
         }
-        </>
         </CalendarStyle>
 
-        {
-            /*clicked && !eventForDate(clicked) && 
-            <EventModal 
-                onClose={}
-                onSave={title => {
-                setEvents({ ...events, { title,date: clicked } })
-                setClicked(null)
-                }}
-            />*/
-        }
+        <NewEvent></NewEvent>
         </>
     )
 }
