@@ -3,7 +3,7 @@ import { EventStyle, EventHeaderStyle, EventInput, ButtonClose, ButtonSave, Titl
 
 import Button from '../Button'
 
-const EventModal: React.FC<any> = ({ onSave, onClose }) => {
+const EventModal: React.FC<any> = ({ onSave, onClose, eventsArray}) => {
     const [title, setTitle] = useState<string>()
     const [error, setError] = useState(false)
 
@@ -32,6 +32,12 @@ const EventModal: React.FC<any> = ({ onSave, onClose }) => {
                     }
                 }}
             >Insert</ButtonSave>
+
+            {
+                eventsArray.map((v:any) => {
+                    return <p>{v.title}</p>
+                })
+            }
 
         </EventStyle>
     )

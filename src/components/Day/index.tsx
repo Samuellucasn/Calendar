@@ -2,7 +2,7 @@ import { DayStyle } from "./style";
 
 interface DaysProps {
     day: any,
-    onClick: () => void
+    onClick: (v:any) => void
 }
 
 const Days : React.FC<DaysProps> = ({ day, onClick }) => {
@@ -14,4 +14,4 @@ const Days : React.FC<DaysProps> = ({ day, onClick }) => {
     )
 }
 
-export default Days
+export default Days 

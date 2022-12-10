@@ -16,7 +16,7 @@ function Calendar() {
         []
     )
 
-    const eventForDate = (date:any) => events.find((v:any) => v.date === date)
+    const eventForDate = (date:any) => events.filter((v:any) => {return v.date === date})
     
     useEffect(() => {
         localStorage.setItem('events', JSON.stringify(events))
@@ -58,6 +58,7 @@ function Calendar() {
 
         { clicked &&
             <NewEvent 
+            eventsArray={eventForDate(clicked)}
             onClose={() => setClicked(null)}
             onSave={(title: string) => {
                 setEvents([ ...events, { title, date: clicked }])

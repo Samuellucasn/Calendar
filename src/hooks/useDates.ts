@@ -15,19 +15,18 @@ export const useDates: (events: any, monthNav: number) => { daysArray: Object[];
         const year = date.getFullYear()
         const monthNumber = date.getMonth()
         const monthString = date.toLocaleString('eng', { month: 'long' })
-        const weekDay = date.getDay()
         
         const dateArray = []
 
         const monthDays = new Date(year, monthNumber+1, 0).getDate()
 
-        const blockDays = weekDay -1
+        const blockDays = new Date(year, monthNumber, 1).getDay()
 
-        console.log(blockDays)
         
         
-        for (let i = 1; i <= blockDays + monthDays; i++) {
+        for (let i = 1; i < blockDays + monthDays; i++) {
             const dayString = `${monthNumber + 1}/${i - blockDays}/${year}`
+            console.log(eventForDate(dayString))
 
             if (i > blockDays) {
                 dateArray.push({
@@ -53,6 +52,6 @@ export const useDates: (events: any, monthNav: number) => { daysArray: Object[];
 
     return {
         daysArray,
-        dateDisplay
+        dateDisplay 
     }
 }
