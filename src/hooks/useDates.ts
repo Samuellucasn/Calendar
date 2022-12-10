@@ -15,14 +15,15 @@ export const useDates: (events: any, monthNav: number) => { daysArray: Object[];
         const year = date.getFullYear()
         const monthNumber = date.getMonth()
         const monthString = date.toLocaleString('eng', { month: 'long' })
-        const weekDay = date.toLocaleString('eng', { weekday: 'long' })
+        const weekDay = date.getDay()
         
         const dateArray = []
-        const weekDaysArray = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
         const monthDays = new Date(year, monthNumber+1, 0).getDate()
 
-        const blockDays = weekDaysArray.indexOf(weekDay);
+        const blockDays = weekDay -1
+
+        console.log(blockDays)
         
         
         for (let i = 1; i <= blockDays + monthDays; i++) {

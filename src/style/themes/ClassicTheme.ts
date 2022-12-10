@@ -11,9 +11,9 @@ export default {
         dayInWeekBackground: '#ebb1b1',
         dayInWeekBackgroundWeekend: '',
 
-        eventsBackground: '',
-        eventsButtonBgClose: 'red',
-        eventsButtonBgSave: 'green',
+        eventsBackground: 'pink',
+        eventsButtonBgClose: '#ff4040',
+        eventsButtonBgSave: '#7cc27c',
     },
 
     fonts: {
@@ -32,7 +32,7 @@ export default {
         calendarBoxShadow: '',
 
         headerBorderBottom: '',
-        headerButtonPadding: '',
+        headerButtonPadding: '20px',
 
         dayBorder: '1px solid #beb9b9',
         dayBorderStyle: 'dotted',
@@ -40,7 +40,9 @@ export default {
         dayInWeekBorder: '1px solid white',
         dayInWeekPadding: '10px',
 
-        eventsButtonWeight: '',
-        eventsButtonPadding: '',
+        eventsBorderRadius: '',
+        eventsButtonWeight: 'bold',
+        eventsButtonPadding: '5px',
+        eventsButtonBorderRadius: '5px',
     }
 }

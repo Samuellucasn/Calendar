@@ -43,8 +43,10 @@ declare module 'styled-components' {
         dayInWeekBorder: string,
         dayInWeekPadding: string,
         
+        eventsBorderRadius: string,
         eventsButtonWeight: string,
         eventsButtonPadding: string,
+        eventsButtonBorderRadius: string,
     }
     }
 }

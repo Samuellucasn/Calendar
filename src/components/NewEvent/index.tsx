@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { EventStyle, EventHeaderStyle, EventInput, ButtonClose, ButtonSave} from './style'
+import { EventStyle, EventHeaderStyle, EventInput, ButtonClose, ButtonSave, Title} from './style'
 
 import Button from '../Button'
 
@@ -10,7 +10,7 @@ const EventModal: React.FC<any> = ({ onSave, onClose }) => {
     return (
         <EventStyle>   
             <EventHeaderStyle>
-                <h3>Event mark</h3>
+                <Title>Event mark</Title>
 
                 <ButtonClose onClick={onClose}>X</ButtonClose>
             </EventHeaderStyle>

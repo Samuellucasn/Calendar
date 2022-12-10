@@ -24,6 +24,7 @@ function Calendar() {
 
     const { daysArray, dateDisplay } = useDates(events, monthNav)
 
+    console.log(daysArray)
     return (
         <>
         <CalendarHeader 
