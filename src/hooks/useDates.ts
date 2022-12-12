@@ -26,7 +26,6 @@ export const useDates: (events: any, monthNav: number) => { daysArray: Object[];
         
         for (let i = 1; i < blockDays + monthDays; i++) {
             const dayString = `${monthNumber + 1}/${i - blockDays}/${year}`
-            console.log(eventForDate(dayString))
 
             if (i > blockDays) {
                 dateArray.push({

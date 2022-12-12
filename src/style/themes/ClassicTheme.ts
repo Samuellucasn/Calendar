@@ -32,7 +32,7 @@ export default {
         calendarBoxShadow: '',
 
         headerBorderBottom: '',
-        headerButtonPadding: '20px',
+        headerButtonPadding: '20px', 
 
         dayBorder: '1px solid #beb9b9',
         dayBorderStyle: 'dotted',

@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { ButtonStyle } from "../Button/style";
 
 export const EventStyle = styled.div`
-    height: 100px;
     width: 300px;
     background-color: ${props => props.theme.colors.eventsBackground};
     border-radius: ${props => props.theme.styles.eventsBorderRadius};
@@ -59,6 +58,5 @@ export const ButtonSave = styled(ButtonStyle)`
 
 export const Title = styled.h3`
     margin: 0 20px;
-    font-family: sans-serif
+    font-family: sans-serif;
 `
-

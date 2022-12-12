@@ -1,9 +1,8 @@
 import { useState } from 'react'
 import { EventStyle, EventHeaderStyle, EventInput, ButtonClose, ButtonSave, Title} from './style'
+import EventTitle from '../EventTitle'
 
-import Button from '../Button'
-
-const EventModal: React.FC<any> = ({ onSave, onClose, eventsArray}) => {
+const EventModal: React.FC<any> = ({ onSave, onClose, onDelete, eventsArray}) => {
     const [title, setTitle] = useState<string>()
     const [error, setError] = useState(false)
 
@@ -34,8 +33,8 @@ const EventModal: React.FC<any> = ({ onSave, onClose, eventsArray}) => {
             >Insert</ButtonSave>
 
             {
-                eventsArray.map((v:any) => {
-                    return <p>{v.title}</p>
+                eventsArray.map((v:any, i: any) => {
+                    return <EventTitle key={i} onClick={onDelete}>{v.title}</EventTitle>
                 })
             }
 
