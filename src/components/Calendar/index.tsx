@@ -23,6 +23,9 @@ function Calendar() {
     }, [events])
 
     const { daysArray, dateDisplay } = useDates(events, monthNav)
+
+    console.log(events)
+
     return (
         <>
         <CalendarHeader 
@@ -59,10 +62,15 @@ function Calendar() {
             eventsArray={eventForDate(clicked)}
             onClose={() => setClicked(null)}
             onSave={(title: string) => {
-                setEvents([ ...events, { title, date: clicked }])
+                setEvents([ ...events, { title, date: clicked}])
                 setClicked(null)
             }}
-            // onDelete={setEvents(events.filter((v:any) => v.date !== clicked))}
+            onDelete={(id:number) => {
+                const espera = events.filter((v:any) => {return v.date !== clicked})
+                const eventArray = events.filter((v:any) => {return v.date === clicked})
+                eventArray.splice(id, 1)
+                setEvents([...espera, ...eventArray])
+            }}
             />
         }
         </>

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Button from "../Button";
+import {ButtonStyle} from "../Button/style";
 
 export const EventTitleStyle = styled.div`
     width: 250px;
@@ -13,8 +13,13 @@ export const EventTitleStyle = styled.div`
     margin: 10px 0;
     border-radius: 5px;
     border: 1px solid black;
+    padding: 2px;
 `
 
-export const EventTitleButton = styled(Button)`
-    background-color: blue;
+export const EventTitleButton = styled(ButtonStyle)`
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+
+    margin: 0 5px;
 `

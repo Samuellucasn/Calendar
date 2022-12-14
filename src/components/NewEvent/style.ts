@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { ButtonStyle } from "../Button/style";
 
 export const EventStyle = styled.div`
+    max-height: 250px;
     width: 300px;
     background-color: ${props => props.theme.colors.eventsBackground};
     border-radius: ${props => props.theme.styles.eventsBorderRadius};
@@ -10,6 +11,8 @@ export const EventStyle = styled.div`
     z-index: 20;
     top: calc(50% - 100px);
     left: calc(50% - 150px);
+    overflow-y: scroll;
+    
 
     text-align: center;
 
@@ -17,6 +20,16 @@ export const EventStyle = styled.div`
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        -webkit-appearance: none;
+        background-color: gray;
+        border-radius: 10px;
+    }
 `
 
 export const EventHeaderStyle = styled.div`

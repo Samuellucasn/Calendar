@@ -1,16 +1,17 @@
-import { DayStyle } from "./style";
+import React from "react";
+import { DayStyle, RedBall } from "./style";
 
 interface DaysProps {
     day: any,
-    onClick: (v:any) => void
+    onClick: React.MouseEventHandler<HTMLDivElement>
 }
 
 const Days : React.FC<DaysProps> = ({ day, onClick }) => {
-    return (
+    return (<>
         <DayStyle onClick={onClick} >
-            {day.value !== 'none'? day.value : ''}
-            {day.event && <div>{ day.event.title }</div>}
-        </DayStyle>
+            {day.day !== 'none'? day.day : ''}
+            {day.event && <RedBall/>}
+        </DayStyle></>
     )
 }
 

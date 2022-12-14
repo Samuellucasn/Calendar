@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { EventStyle, EventHeaderStyle, EventInput, ButtonClose, ButtonSave, Title} from './style'
 import EventTitle from '../EventTitle'
 
-const EventModal: React.FC<any> = ({ onSave, onClose, onDelete, eventsArray}) => {
-    const [title, setTitle] = useState<string>()
+const NewEvent: React.FC<any> = ({ onSave, onClose, onDelete, eventsArray}) => {
+    const [title, setTitle] = useState('')
     const [error, setError] = useState(false)
 
     return (
@@ -18,7 +18,7 @@ const EventModal: React.FC<any> = ({ onSave, onClose, onDelete, eventsArray}) =>
             <EventInput 
                 type={'text'}
                 value={title}
-                onChange={(e:any) => { setTitle(e.target.value)} }
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => {setTitle(e.target.value)} }
             />
             
             <ButtonSave
@@ -34,7 +34,7 @@ const EventModal: React.FC<any> = ({ onSave, onClose, onDelete, eventsArray}) =>
 
             {
                 eventsArray.map((v:any, i: any) => {
-                    return <EventTitle key={i} onClick={onDelete}>{v.title}</EventTitle>
+                    return <EventTitle key={i} id={i} onDelete={onDelete}>{v.title}</EventTitle>
                 })
             }
 
@@ -42,4 +42,4 @@ const EventModal: React.FC<any> = ({ onSave, onClose, onDelete, eventsArray}) =>
     )
 }
 
-export default EventModal
+export default NewEvent

@@ -10,3 +10,10 @@ export const DayStyle = styled.div`
 
     height: 50px;
 `
+
+export const RedBall = styled.div`
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+`

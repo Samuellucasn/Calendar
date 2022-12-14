@@ -24,19 +24,19 @@ export const useDates: (events: any, monthNav: number) => { daysArray: Object[];
 
         
         
-        for (let i = 1; i < blockDays + monthDays; i++) {
+        for (let i = 1; i <= blockDays + monthDays; i++) {
             const dayString = `${monthNumber + 1}/${i - blockDays}/${year}`
 
             if (i > blockDays) {
                 dateArray.push({
-                    value: i - blockDays,
+                    day: i - blockDays,
                     event: eventForDate(dayString),
                     isCurrentDay: i - blockDays === date.getDate() && monthNav === 0,
                     date: dayString
                 })
             } else {
                 dateArray.push({
-                    value: 'none',
+                    day: 'none',
                     event: null,
                     isCurrentDay: false,
                     date: ''
@@ -46,6 +46,7 @@ export const useDates: (events: any, monthNav: number) => { daysArray: Object[];
 
         setDaysArray(dateArray)
         setDateDisplay(monthString + ' ' + year)
+
 
     }, [events, monthNav])
 
