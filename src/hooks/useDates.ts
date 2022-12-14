@@ -1,8 +1,21 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-export const useDates: (events: any, monthNav: number) => { daysArray: Object[]; dateDisplay: string; } = (events, monthNav) => {
+interface daysArray {
+    day: string | number,
+    event: Object | undefined | null,
+    isCurrentDay: boolean,
+    date: string
+}
 
-    const [daysArray, setDaysArray] = useState<Object[]>([])
+interface events {
+    title: string
+    date: string
+}
+
+export const useDates : (events: events[], monthNav: number) => { daysArray: daysArray[]; dateDisplay: string; } = (events, monthNav) => {
+
+
+    const [daysArray, setDaysArray] = useState<daysArray[]>([])
     const [dateDisplay, setDateDisplay] = useState('')
 
     const eventForDate = (date:string) => events.find((v:any) => v.date === date)

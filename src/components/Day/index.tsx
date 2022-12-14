@@ -1,8 +1,15 @@
 import React from "react";
 import { DayStyle, RedBall } from "./style";
 
+interface daysArray {
+    day: string | number,
+    event: Object | undefined | null,
+    isCurrentDay: boolean,
+    date: string
+}
+
 interface DaysProps {
-    day: any,
+    day: daysArray,
     onClick: React.MouseEventHandler<HTMLDivElement>
 }
 

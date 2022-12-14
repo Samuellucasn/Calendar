@@ -2,9 +2,9 @@ import { HeaderStyle, ButtonHeader } from './style'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 
 interface HeaderProps {
-    children: any
-    onNext: any
-    onBack: any
+    children: React.ReactNode,
+    onNext: React.MouseEventHandler<HTMLButtonElement>,
+    onBack: React.MouseEventHandler<HTMLButtonElement>
 }
 
 const Header: React.FC<HeaderProps> = ({children, onNext, onBack}) => {

@@ -7,24 +7,34 @@ import CalendarHeader from '../CalendarHeader'
 import Day from '../Day'
 import NewEvent from '../NewEvent'
 
+interface daysArray {
+    day: string | number,
+    event: Object | undefined | null,
+    isCurrentDay: boolean,
+    date: string
+}
+
+interface events {
+    title: string
+    date: string
+}
+
 function Calendar() {
     const [monthNav, setMonthNav] = useState(0)
     const [clicked, setClicked] = useState<string | null>()
-    const [events, setEvents] = useState(
+    const [events, setEvents] = useState<events[]>(
       localStorage.getItem('events') ? 
         JSON.parse(localStorage.getItem('events') || "") : 
         []
     )
 
-    const eventForDate = (date:any) => events.filter((v:any) => {return v.date === date})
+    const eventForDate = (date:string) => events.filter((v:events) => {return v.date === date})
     
     useEffect(() => {
         localStorage.setItem('events', JSON.stringify(events))
     }, [events])
 
     const { daysArray, dateDisplay } = useDates(events, monthNav)
-
-    console.log(events)
 
     return (
         <>
@@ -43,18 +53,18 @@ function Calendar() {
             <DaysInWeekDiv>Sat</DaysInWeekDiv>
 
         {
-            daysArray.map((v:any, i: any) => {
+            daysArray.map((v:daysArray, i: number) => {
                 return <Day
                   key={i}
                   day={v}
                   onClick={() => {
-                    if (v.value !== 'none') {
+                    if (v.day !== 'none') {
                         setClicked(v.date)
                     }
                   }}
                 />
             })
-        }
+        } 
         </CalendarStyle>
 
         { clicked &&
@@ -66,8 +76,8 @@ function Calendar() {
                 setClicked(null)
             }}
             onDelete={(id:number) => {
-                const espera = events.filter((v:any) => {return v.date !== clicked})
-                const eventArray = events.filter((v:any) => {return v.date === clicked})
+                const espera = events.filter((v:events) => {return v.date !== clicked})
+                const eventArray = events.filter((v:events) => {return v.date === clicked})
                 eventArray.splice(id, 1)
                 setEvents([...espera, ...eventArray])
             }}
