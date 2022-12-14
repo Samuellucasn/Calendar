@@ -3,11 +3,11 @@ import Calendar from "./components/Calendar"
 
 import { ThemeProvider } from 'styled-components'
 
-import ClassicTheme from "./style/themes/ClassicTheme"
+import defaultTheme from "./style/themes/defaultTheme"
 
 function App() {
   return (
-    <ThemeProvider theme={ClassicTheme}>
+    <ThemeProvider theme={defaultTheme}>
       <Calendar></Calendar>
       <Global></Global>
     </ThemeProvider>

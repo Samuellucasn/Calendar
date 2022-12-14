@@ -5,7 +5,7 @@ export const EventStyle = styled.div`
     max-height: 250px;
     width: 300px;
     background-color: ${props => props.theme.colors.eventsBackground};
-    border-radius: ${props => props.theme.styles.eventsBorderRadius};
+    border-radius: 10px;
 
     position: absolute;
     z-index: 20;
@@ -50,8 +50,8 @@ export const EventInput = styled.input`
 
 export const ButtonClose = styled(ButtonStyle)`
     background-color: ${props => props.theme.colors.eventsButtonBgClose};
-    padding: ${props => props.theme.styles.eventsButtonPadding};
-    border-radius: ${props => props.theme.styles.eventsButtonBorderRadius};
+    padding: 7px;
+    border-radius: 15px;
 
     font-weight: ${props => props.theme.styles.eventsButtonWeight};
 
@@ -62,8 +62,8 @@ export const ButtonClose = styled(ButtonStyle)`
 `
 export const ButtonSave = styled(ButtonStyle)`
     background-color: ${props => props.theme.colors.eventsButtonBgSave};
-    padding: ${props => props.theme.styles.eventsButtonPadding};
-    border-radius: ${props => props.theme.styles.eventsButtonBorderRadius};
+    padding: 7px;
+    border-radius: 15px;
 
     font-weight: ${props => props.theme.styles.eventsButtonWeight};
     color: white;

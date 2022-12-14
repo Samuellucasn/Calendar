@@ -3,15 +3,15 @@ import styled from 'styled-components'
 export const CalendarStyle = styled.section`
 
     display: grid;
-    grid-template-rows:  ${props => props.theme.styles.gridRow} repeat(5, 1fr);
+    grid-template-rows:  1fr repeat(5, 1fr);
     grid-template-columns:  repeat(7, 1fr);
 
 
     background-color: white;
-    padding: ${props => props.theme.styles.calendarPadding};
+    padding: '';
 
-    border-radius: ${props => props.theme.styles.calendarBorderRadius};
-    box-shadow: ${props => props.theme.styles.calendarBoxShadow};
+    border-radius: '';
+    box-shadow: 0px 10px 19px 0px #3c3c3c;
 `
 
 export const DaysInWeekDiv = styled.div`
@@ -22,8 +22,8 @@ export const DaysInWeekDiv = styled.div`
 
     font-weight: bold;
 
-    padding: ${props => props.theme.styles.dayInWeekPadding};
+    padding: 15px;
     background-color: ${props => props.theme.colors.dayInWeekBackground};
-    border: ${props => props.theme.styles.dayInWeekBorder};
+    border: '';
 
 `

@@ -12,11 +12,11 @@ export const HeaderStyle = styled.header`
 
     font-size: small;
 
-    border-bottom: ${props => props.theme.styles.headerBorderBottom};
-    border-radius: ${props => props.theme.styles.calendarBorderRadius};
+    border-bottom: '';
+    border-radius: '';
 `;
 
 export const ButtonHeader = styled(ButtonStyle)`
     background-color: ${props => props.theme.colors.headerButtonBackground};
-    padding: ${props => props.theme.styles.headerButtonPadding};
+    padding: '';
 `
