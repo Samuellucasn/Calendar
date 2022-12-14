@@ -1,18 +1,11 @@
-import { ReactNode } from 'react'
 import { EventTitleStyle, EventTitleButton } from './style'
+import { EventTitleProps } from '../../interfaces/types'
 
-interface EventTitle {
-    children: ReactNode
-    onDelete: (e: number) => void
-    id: number
-}
-
-const EventTitle: React.FC<EventTitle> = ({ children , onDelete, id}) => {
+const EventTitle: React.FC<EventTitleProps> = ({ children , onDelete, id}) => {
     return (
     <>
         <EventTitleStyle>
-            {children}
-        
+            {children}        
         </EventTitleStyle>
 
         <EventTitleButton

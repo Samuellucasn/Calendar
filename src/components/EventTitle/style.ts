@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {ButtonStyle} from "../Button/style";
 
 export const EventTitleStyle = styled.div`
+    min-height: 20px;
     width: 250px;
 
     background-color: white;

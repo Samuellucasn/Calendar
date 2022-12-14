@@ -1,17 +1,11 @@
 import React, { useState } from 'react'
 import { EventStyle, EventHeaderStyle, EventInput, ButtonClose, ButtonSave, Title} from './style'
+import { NewEventsProps } from '../../interfaces/types'
+
 import EventTitle from '../EventTitle'
 
-interface NewEvents {
-    onSave: (e:string) => void,
-    onClose: React.MouseEventHandler<HTMLButtonElement>,
-    onDelete: (e: number) => void,
-    eventsArray: Object[]
-}
-
-const NewEvent: React.FC<NewEvents> = ({ onSave, onClose, onDelete, eventsArray}) => {
+const NewEvent: React.FC<NewEventsProps> = ({ onSave, onClose, onDelete, eventsArray}) => {
     const [title, setTitle] = useState('')
-    const [error, setError] = useState(false)
 
     return (
         <EventStyle>   
@@ -28,16 +22,7 @@ const NewEvent: React.FC<NewEvents> = ({ onSave, onClose, onDelete, eventsArray}
                 onChange={(e: React.ChangeEvent<HTMLInputElement>) => {setTitle(e.target.value)} }
             />
             
-            <ButtonSave
-                onClick={() => {
-                    if (title) {
-                        setError(false);
-                        onSave(title);
-                    } else {
-                        setError(true);
-                    }
-                }}
-            >Insert</ButtonSave>
+            <ButtonSave onClick={() => {if (title) onSave(title)}}>Insert</ButtonSave>
 
             {
                 eventsArray.map((v:any, i: number) => {

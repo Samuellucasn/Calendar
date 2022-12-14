@@ -1,13 +1,8 @@
 import { HeaderStyle, ButtonHeader } from './style'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
+import { CalendarHeaderProps } from '../../interfaces/types'
 
-interface HeaderProps {
-    children: React.ReactNode,
-    onNext: React.MouseEventHandler<HTMLButtonElement>,
-    onBack: React.MouseEventHandler<HTMLButtonElement>
-}
-
-const Header: React.FC<HeaderProps> = ({children, onNext, onBack}) => {
+const CalendarHeader: React.FC<CalendarHeaderProps> = ({children, onNext, onBack}) => {
     return (
         <>
         <HeaderStyle>
@@ -19,4 +14,4 @@ const Header: React.FC<HeaderProps> = ({children, onNext, onBack}) => {
     ) 
 }
 
-export default Header
+export default CalendarHeader

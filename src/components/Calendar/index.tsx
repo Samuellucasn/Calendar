@@ -1,23 +1,11 @@
 import { CalendarStyle, DaysInWeekDiv } from './style'
 import { useState, useEffect } from 'react'
-
+import { daysArray, events } from '../../interfaces/types'
 import {useDates} from '../../hooks/useDates'
 
 import CalendarHeader from '../CalendarHeader'
 import Day from '../Day'
 import NewEvent from '../NewEvent'
-
-interface daysArray {
-    day: string | number,
-    event: Object | undefined | null,
-    isCurrentDay: boolean,
-    date: string
-}
-
-interface events {
-    title: string
-    date: string
-}
 
 function Calendar() {
     const [monthNav, setMonthNav] = useState(0)
@@ -76,10 +64,10 @@ function Calendar() {
                 setClicked(null)
             }}
             onDelete={(id:number) => {
-                const espera = events.filter((v:events) => {return v.date !== clicked})
-                const eventArray = events.filter((v:events) => {return v.date === clicked})
-                eventArray.splice(id, 1)
-                setEvents([...espera, ...eventArray])
+                const eventsOut = events.filter((v:events) => {return v.date !== clicked})
+                const eventsIn = events.filter((v:events) => {return v.date === clicked})
+                eventsIn.splice(id, 1)
+                setEvents([...eventsOut, ...eventsIn])
             }}
             />
         }
