@@ -18,6 +18,7 @@ declare module 'styled-components' {
             dayColor: string,
             dayHoverColor: string,
             dayHoverBg: string,
+            dayBallBg: string,
             
             currentDayColor:string,
             currentDayBg: string,
@@ -25,10 +26,13 @@ declare module 'styled-components' {
             
             eventsBg: string,
             eventsButtonBgClose: string,
+            eventsButtonColorClose: string,
             eventsButtonBgSave: string,
+            eventsButtonColorSave: string,
+            eventsTitleColor: string,
 
             titleEventButtonBg: string,
-            titleEventBallBg: string,
+            titleEventsButtonColor: string,
         },
 
         fonts: {

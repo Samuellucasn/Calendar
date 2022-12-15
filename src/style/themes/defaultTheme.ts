@@ -15,17 +15,21 @@ export default {
         dayColor: 'black',
         dayHoverColor: 'white',
         dayHoverBg: 'black',
+        dayBallBg: '#e37979',
 
         currentDayColor: '',
         currentDayBg: '',
         currentDayDivBg: '',
         
-        eventsBg: '#eaeaea',
+        eventsBg: '#e37979',
         eventsButtonBgClose: 'white',
+        eventsButtonColorClose: '',
         eventsButtonBgSave: 'black',
+        eventsButtonColorSave: 'white',
+        eventsTitleColor: 'white',
 
         titleEventButtonBg: 'white',
-        titleEventBallBg: '#e37979',
+        titleEventsButtonColor: '',
     },
 
     fonts: {

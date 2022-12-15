@@ -36,5 +36,5 @@ export const Ball = styled.div`
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    background-color: ${props => props.theme.colors.titleEventBallBg};
+    background-color: ${props => props.theme.colors.dayBallBg};
 `

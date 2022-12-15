@@ -4,11 +4,12 @@ import Calendar from "./components/Calendar"
 import { ThemeProvider } from 'styled-components'
 
 import defaultTheme from "./style/themes/defaultTheme"
-import orangeTheme from "./style/themes/orangeTheme"
+import darkTheme from "./style/themes/darkTheme"
+import colorTheme from "./style/themes/colorTheme"
 
 function App() {
   return (
-    <ThemeProvider theme={orangeTheme}>
+    <ThemeProvider theme={darkTheme}>
       <Calendar></Calendar>
       <Global></Global>
     </ThemeProvider>

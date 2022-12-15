@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { ButtonStyle } from "../Button/style";
 
 export const EventStyle = styled.div`
+    min-height: 100px;
     max-height: 250px;
     width: 320px;
     background-color: ${props => props.theme.colors.eventsBg};
@@ -54,6 +55,7 @@ export const ButtonClose = styled(ButtonStyle)`
     border-radius: 15px;
 
     font-weight: '';
+    color: ${props => props.theme.colors.eventsButtonColorClose};
 
     width: 30px;
     height: 30px;
@@ -65,11 +67,11 @@ export const ButtonSave = styled(ButtonStyle)`
     padding: 7px;
     border-radius: 15px;
 
-    font-weight: '';
-    color: white;
+    color: ${props => props.theme.colors.eventsButtonColorSave};
 `
 
 export const Title = styled.h3`
     margin: 0 20px;
     font-family: sans-serif;
+    color: ${props => props.theme.colors.eventsTitleColor}
 `
