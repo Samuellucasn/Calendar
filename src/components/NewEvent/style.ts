@@ -53,7 +53,7 @@ export const ButtonClose = styled(ButtonStyle)`
     padding: 7px;
     border-radius: 15px;
 
-    font-weight: ${props => props.theme.styles.eventsButtonWeight};
+    font-weight: '';
 
     width: 30px;
     height: 30px;
@@ -65,7 +65,7 @@ export const ButtonSave = styled(ButtonStyle)`
     padding: 7px;
     border-radius: 15px;
 
-    font-weight: ${props => props.theme.styles.eventsButtonWeight};
+    font-weight: '';
     color: white;
 `
 

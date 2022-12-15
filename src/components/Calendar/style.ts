@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const CalendarStyle = styled.section`
 
     display: grid;
-    grid-template-rows:  1fr repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     grid-template-columns:  repeat(7, 1fr);
 
 
@@ -11,7 +11,12 @@ export const CalendarStyle = styled.section`
     padding: '';
 
     border-radius: '';
-    box-shadow: 0px 10px 19px 0px #3c3c3c;
+    box-shadow: 0px 9px 10px 0px #3c3c3c;
+
+    @media (max-width: 455px) {
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns:  repeat(7, minmax(45px, auto)) ;
+    }
 `
 
 export const DaysInWeekDiv = styled.div`
@@ -25,5 +30,4 @@ export const DaysInWeekDiv = styled.div`
     padding: 15px;
     background-color: ${props => props.theme.colors.dayInWeekBackground};
     border: '';
-
 `

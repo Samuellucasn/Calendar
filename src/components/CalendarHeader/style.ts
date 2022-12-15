@@ -18,5 +18,6 @@ export const HeaderStyle = styled.header`
 
 export const ButtonHeader = styled(ButtonStyle)`
     background-color: ${props => props.theme.colors.headerButtonBackground};
-    padding: '';
+    padding: 0;
+    margin: 0 10px;
 `
