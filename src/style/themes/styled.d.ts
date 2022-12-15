@@ -4,18 +4,27 @@ declare module 'styled-components' {
     export interface DefaultTheme {
 
         colors: {
-            bodyBackground: string,
+            bodyBg: string,
 
-            headerBackground: string,
+            headerBg: string,
             headerColor: string,
-            headerButtonBackground: string,
+            headerButtonColor: string,
 
-            dayInWeekBackground: string;
-            dayInWeekBackgroundWeekend: string,
+            dayInWeekBg: string;
+            dayInWeekBgWeekend: string,
+
+            dayHoverBg: string,
             
-            eventsBackground: string,
+            currentDayColor:string,
+            currentDayBg: string,
+            currentDayDivBg: string,
+            
+            eventsBg: string,
             eventsButtonBgClose: string,
             eventsButtonBgSave: string,
+
+            titleEventButtonBg: string,
+            titleEventBallBg: string,
         },
 
         fonts: {

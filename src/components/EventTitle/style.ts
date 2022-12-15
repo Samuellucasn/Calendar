@@ -21,6 +21,9 @@ export const EventTitleButton = styled(ButtonStyle)`
     width: 30px;
     height: 30px;
     border-radius: 10px;
+    border: 1px solid black;
 
     margin: 0 5px;
+
+    background-color: ${props => props.theme.colors.titleEventButtonBg}
 `

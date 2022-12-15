@@ -3,8 +3,8 @@ import { ButtonStyle } from "../Button/style";
 
 export const EventStyle = styled.div`
     max-height: 250px;
-    width: 300px;
-    background-color: ${props => props.theme.colors.eventsBackground};
+    width: 320px;
+    background-color: ${props => props.theme.colors.eventsBg};
     border-radius: 10px;
 
     position: absolute;
@@ -22,7 +22,7 @@ export const EventStyle = styled.div`
     justify-content: center;
 
     ::-webkit-scrollbar {
-        width: 10px;
+        width: 5px;
     }
     
     ::-webkit-scrollbar-thumb {

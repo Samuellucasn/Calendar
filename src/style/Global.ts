@@ -10,7 +10,7 @@ export const globalStyle = createGlobalStyle`
     body {
         height: 100vh;
 
-        background-color: ${props => props.theme.colors.bodyBackground};
+        background-image: ${props => props.theme.colors.bodyBg};
         
         font-family: ${props => props.theme.fonts.fontFamily};
         
