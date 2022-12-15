@@ -3,12 +3,18 @@ export default {
     colors: {
         bodyBg: '',
 
+        calendarBg: 'white',
+
         headerBg: 'white',
         headerColor: 'black',
         headerButtonColor: 'black',
 
         dayInWeekBg: '',
-        dayInWeekBgWeekend: '',
+        dayInWeekColor: '',
+
+        dayColor: 'black',
+        dayHoverColor: 'white',
+        dayHoverBg: 'black',
 
         currentDayColor: '',
         currentDayBg: '',

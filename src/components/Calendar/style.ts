@@ -9,7 +9,7 @@ export const CalendarStyle = styled.section`
     align-items: center;
 
 
-    background-color: white;
+    background-image: ${props => props.theme.colors.calendarBg};
 
     @media (max-width: 455px) {
         grid-template-rows: repeat(5, 1fr);
@@ -27,5 +27,6 @@ export const DaysInWeekDiv = styled.div`
 
     padding: 15px;
     background-color: ${props => props.theme.colors.dayInWeekBg};
+    color: ${props => props.theme.colors.dayInWeekColor};
 `
 

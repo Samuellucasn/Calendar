@@ -1,9 +1,6 @@
 import styled from "styled-components";
 
 export const DayStyle = styled.div`
-    border: '';
-    border-style: '';
-
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -13,9 +10,11 @@ export const DayStyle = styled.div`
 
     height: 50px;
 
+    color: ${props => props.theme.colors.dayColor};
+
     :hover{ 
-        background-color: black;
-        color: white;
+        background-color: ${props => props.theme.colors.dayHoverBg};
+        color: ${props => props.theme.colors.dayHoverColor};
         border-radius: 10px;
         width: 35px;
         height: 35px;

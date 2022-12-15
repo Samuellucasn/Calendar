@@ -1,14 +1,20 @@
 export default {
 
     colors: {
-        bodyBg: 'linear-gradient(#79ce74, #267060, #172A3A)',
+        bodyBg: '',
 
-        headerBg: 'white',
+        calendarBg: 'linear-gradient(#ff9b7e,#c94b35,#e24747)',
+
+        headerBg: 'transparent',
         headerColor: '#267060',
         headerButtonColor: '#267060',
 
         dayInWeekBg: '',
-        dayInWeekBgWeekend: '',
+        dayInWeekColor: 'white',
+
+        dayColor: 'white',
+        dayHoverColor: '',
+        dayHoverBg: '',
 
         currentDayColor: '',
         currentDayBg: '',
@@ -17,6 +23,9 @@ export default {
         eventsBg: '#09BC8A',
         eventsButtonBgClose: 'white',
         eventsButtonBgSave: '172A3A',
+
+        titleEventButtonBg: '',
+        titleEventBallBg: '',
     },
 
     fonts: {

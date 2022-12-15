@@ -6,13 +6,17 @@ declare module 'styled-components' {
         colors: {
             bodyBg: string,
 
+            calendarBg: string,
+
             headerBg: string,
             headerColor: string,
             headerButtonColor: string,
 
             dayInWeekBg: string;
-            dayInWeekBgWeekend: string,
+            dayInWeekColor: string,
 
+            dayColor: string,
+            dayHoverColor: string,
             dayHoverBg: string,
             
             currentDayColor:string,
