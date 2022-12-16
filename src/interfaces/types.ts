@@ -39,5 +39,5 @@ export interface NewEventsProps {
 export interface ButtonProps {
     onClick: React.MouseEventHandler<HTMLButtonElement>,
     border?: string,
-    color?: string
+    color?: string,
 }

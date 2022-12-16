@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { ButtonProps } from "../../interfaces/types";
 
-export const ButtonStyle = styled.button<{border: string|undefined, color: string|undefined}>`
+export const ButtonStyle = styled.button<ButtonProps>`
     border: ${props => props.border? props.border : 'transparent'};
     background-color: ${props => props.color? props.color : 'transparent'};
 

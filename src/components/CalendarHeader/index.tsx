@@ -6,9 +6,9 @@ const CalendarHeader: React.FC<CalendarHeaderProps> = ({children, onNext, onBack
     return (
         <>
         <HeaderStyle>
-            <ButtonHeader onClick={ onNext }><FaChevronLeft></FaChevronLeft></ButtonHeader>
+            <ButtonHeader onClick={ onNext } ><FaChevronLeft></FaChevronLeft></ButtonHeader>
                 <h1>{ children }</h1>
-            <ButtonHeader onClick={ onBack }><FaChevronRight></FaChevronRight></ButtonHeader>
+            <ButtonHeader onClick={ onBack } ><FaChevronRight></FaChevronRight></ButtonHeader>
         </HeaderStyle>
         </>
     ) 
