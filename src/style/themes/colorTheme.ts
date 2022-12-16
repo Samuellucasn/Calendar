@@ -1,4 +1,5 @@
 export default {
+    title: 'color',
 
     colors: {
         bodyBg: 'linear-gradient(#253645,#aa607b,#ffcaca)',

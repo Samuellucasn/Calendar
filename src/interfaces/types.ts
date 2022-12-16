@@ -35,3 +35,9 @@ export interface NewEventsProps {
     onDelete: (e: number) => void,
     eventsArray: Object[]
 }
+
+export interface ButtonProps {
+    onClick: React.MouseEventHandler<HTMLButtonElement>,
+    border?: string,
+    color?: string
+}

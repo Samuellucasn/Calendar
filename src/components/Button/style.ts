@@ -1,8 +1,11 @@
 import styled from "styled-components";
 
-export const ButtonStyle = styled.button`
-    border: none;
-    background-color: transparent;
+export const ButtonStyle = styled.button<{border: string|undefined, color: string|undefined}>`
+    border: ${props => props.border? props.border : 'transparent'};
+    background-color: ${props => props.color? props.color : 'transparent'};
+
+    min-width: 20px;
+    min-height: 20px;
 
     font-weight: normal;
     cursor: pointer;
@@ -12,3 +15,11 @@ export const ButtonStyle = styled.button`
     justify-content: center;
 `;
 
+export const Wrapper = styled.div`
+    width: 100%;
+
+    margin-bottom: 40px;
+
+    display: flex;
+    justify-content: space-evenly;
+`

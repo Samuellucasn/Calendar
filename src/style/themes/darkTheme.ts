@@ -1,4 +1,5 @@
 export default {
+    title: 'dark',
 
     colors: {
         bodyBg: 'linear-gradient(#151515, #151515)',
@@ -10,12 +11,12 @@ export default {
         headerButtonColor: 'white',
 
         dayInWeekBg: '',
-        dayInWeekColor: 'white',
+        dayInWeekColor: '#464646',
 
         dayColor: 'white',
         dayHoverColor: 'black',
         dayHoverBg: 'white',
-        dayBallBg: '#848484',
+        dayBallBg: '#4a86ff',
 
         currentDayColor: '',
         currentDayBg: '',
