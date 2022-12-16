@@ -19,7 +19,8 @@ const NewEvent: React.FC<NewEventsProps> = ({ onSave, onClose, onDelete, eventsA
             <EventInput 
                 type={'text'}
                 value={title}
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) => {setTitle(e.target.value)} }
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => {setTitle(e.target.value)}}
+                onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => { if (e.key === 'Enter') return onSave(title) }}
             />
             
             <ButtonSave onClick={() => {if (title) onSave(title)}}>Insert</ButtonSave>

@@ -7,7 +7,7 @@ const Days : React.FC<DaysProps> = ({ day, onClick }) => {
     <>
         { day.isCurrentDay? 
             <CurrentDayStyle onClick={onClick} >
-                X
+                {day.day}
                 {day.event && <Ball/>}
             </CurrentDayStyle>
             :

@@ -26,7 +26,6 @@ export const DaysInWeekDiv = styled.div`
     font-weight: bold;
 
     padding: 15px;
-    background-color: ${props => props.theme.colors.dayInWeekBg};
     color: ${props => props.theme.colors.dayInWeekColor};
 `
 

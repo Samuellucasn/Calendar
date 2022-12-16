@@ -10,7 +10,6 @@ export default {
         headerColor: 'white',
         headerButtonColor: 'white',
 
-        dayInWeekBg: '',
         dayInWeekColor: 'white',
 
         dayColor: 'white',
@@ -19,8 +18,8 @@ export default {
         dayBallBg: '#403956',
 
         currentDayColor: '',
-        currentDayBg: '',
-        currentDayDivBg: '',
+        currentDayBg: '#403956',
+        currentDayDivBg: '#ed9191',
         
         eventsBg: '#ececec',
         eventsButtonBgClose: 'white',

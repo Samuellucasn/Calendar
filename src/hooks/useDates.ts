@@ -1,16 +1,5 @@
 import { useEffect, useState } from "react";
-
-interface daysArray {
-    day: string | number,
-    event: Object | undefined | null,
-    isCurrentDay: boolean,
-    date: string
-}
-
-interface events {
-    title: string
-    date: string
-}
+import { daysArray, events } from "../interfaces/types";
 
 export const useDates : (events: events[], monthNav: number) => { daysArray: daysArray[]; dateDisplay: string; } = (events, monthNav) => {
 

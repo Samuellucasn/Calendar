@@ -47,6 +47,8 @@ export const EventInput = styled.input`
     height: 20px;
 
     margin: 0 10px;
+    border: 1px solid black;
+    border-radius: 5px;
 `
 
 export const ButtonClose = styled(ButtonStyle)`
@@ -54,7 +56,6 @@ export const ButtonClose = styled(ButtonStyle)`
     padding: 7px;
     border-radius: 15px;
 
-    font-weight: '';
     color: ${props => props.theme.colors.eventsButtonColorClose};
 
     width: 30px;

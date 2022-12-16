@@ -25,7 +25,12 @@ export const DayStyle = styled.div`
 
 export const CurrentDayStyle = styled(DayStyle)`
     color: ${props => props.theme.colors.currentDayColor};
+    background-color: ${props => props.theme.colors.currentDayBg};
     font-size: larger;
+
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
 
     div {
         background-color: ${props => props.theme.colors.currentDayDivBg};

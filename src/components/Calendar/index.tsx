@@ -46,7 +46,7 @@ function Calendar() {
                   key={i}
                   day={v}
                   onClick={() => {
-                    if (v.day !== 'none') {
+                    if (v.day !== 'none' && !clicked) {
                         setClicked(v.date)
                     }
                   }}
