@@ -2,11 +2,11 @@ export default {
     title: 'default',
     
     colors: {
-        bodyBg: '',
+        bodyBg: 'linear-gradient(#ebebeb,#ebebeb)',
 
-        calendarBg: 'white',
+        calendarBg: 'transparent',
 
-        headerBg: 'white',
+        headerBg: 'tranparent',
         headerColor: 'black',
         headerButtonColor: 'black',
 
@@ -25,9 +25,10 @@ export default {
         eventsBg: '#e37979',
         eventsButtonBgClose: 'white',
         eventsButtonColorClose: '',
-        eventsButtonBgSave: 'black',
+        eventsButtonBgSave: '#000000',
         eventsButtonColorSave: 'white',
         eventsTitleColor: 'white',
+        eventsScrollBg: '',
 
         titleEventButtonBg: 'white',
         titleEventsButtonColor: '',

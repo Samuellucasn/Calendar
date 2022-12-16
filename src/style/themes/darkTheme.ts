@@ -28,8 +28,9 @@ export default {
         eventsButtonBgSave: '#9fabff',
         eventsButtonColorSave: 'black',
         eventsTitleColor: 'black',
+        eventsScrollBg: 'gray',
 
-        titleEventButtonBg: '#393d45',
+        titleEventButtonBg: 'black',
         titleEventsButtonColor: 'white',
     },
 

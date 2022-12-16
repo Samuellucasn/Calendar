@@ -22,12 +22,13 @@ export default {
         currentDayBg: '',
         currentDayDivBg: '',
         
-        eventsBg: '#908b9d',
+        eventsBg: '#ececec',
         eventsButtonBgClose: 'white',
         eventsButtonColorClose: '',
         eventsButtonBgSave: '#172A3A',
         eventsButtonColorSave: 'white',
         eventsTitleColor: '',
+        eventsScrollBg: '',
 
         titleEventButtonBg: 'white',
         titleEventsButtonColor: '',

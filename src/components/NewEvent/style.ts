@@ -28,7 +28,7 @@ export const EventStyle = styled.div`
     
     ::-webkit-scrollbar-thumb {
         -webkit-appearance: none;
-        background-color: gray;
+        background-color: ${props => props.theme.colors.eventsScrollBg};
         border-radius: 10px;
     }
 `

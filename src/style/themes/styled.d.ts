@@ -30,6 +30,7 @@ declare module 'styled-components' {
             eventsButtonBgSave: string,
             eventsButtonColorSave: string,
             eventsTitleColor: string,
+            eventsScrollBg: string,
 
             titleEventButtonBg: string,
             titleEventsButtonColor: string,
