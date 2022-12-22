@@ -9,13 +9,13 @@ A calendar to write down your daily events
 
 ![calendarDark](https://user-images.githubusercontent.com/100080387/209005300-2641555d-b263-4766-8839-caba0ec0fc06.png)
 
-## 📅Features
+## 📅 Features
  * Display days and months dynamically
  * Possibility to create and delete unlimited events any day
  * Options of three color themes
  * Responsive Layout
 
-## 💾Technologies
+## 💾 Technologies
  * New Date
  * React
  * Typescript
